@@ -2,17 +2,25 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <react-demo :message="message" @onMyEvent="parentClickHandle"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import reactDemo from './components/react/ReactDemo.jsx'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+    'react-demo': reactDemo
+  },
+  data () {
+    return {
+      message: 'Hello Demo from React!'
+    }
+  },
 }
 </script>
 
