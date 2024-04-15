@@ -1,20 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <react-demo :message="message" @onMyEvent="parentClickHandle"/>
+    <react-demo :message="message" @onMyEvent="parentClickHandle"/> -->
+
+    <MyChat />
+    
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import reactDemo from './components/react/ReactDemo.jsx'
+import MyChat from './components/MyChat/MyChat.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    'react-demo': reactDemo
+    // HelloWorld,
+    // 'react-demo': reactDemo,
+    MyChat
   },
   data () {
     return {
